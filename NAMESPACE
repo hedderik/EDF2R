@@ -1,1 +1,2 @@
+useDynLib(EDF2R)
 exportPattern("^[[:alpha:]]+")
