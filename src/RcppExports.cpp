@@ -5,25 +5,14 @@
 
 using namespace Rcpp;
 
-// readEDFsamples
-DataFrame readEDFsamples(std::string fname);
-RcppExport SEXP EDF2R_readEDFsamples(SEXP fnameSEXP) {
+// parseEDF
+List parseEDF(std::string fname);
+RcppExport SEXP EDF2R_parseEDF(SEXP fnameSEXP) {
 BEGIN_RCPP
     Rcpp::RObject __result;
     Rcpp::RNGScope __rngScope;
     Rcpp::traits::input_parameter< std::string >::type fname(fnameSEXP);
-    __result = Rcpp::wrap(readEDFsamples(fname));
-    return __result;
-END_RCPP
-}
-// readEDFevents
-DataFrame readEDFevents(std::string fname);
-RcppExport SEXP EDF2R_readEDFevents(SEXP fnameSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject __result;
-    Rcpp::RNGScope __rngScope;
-    Rcpp::traits::input_parameter< std::string >::type fname(fnameSEXP);
-    __result = Rcpp::wrap(readEDFevents(fname));
+    __result = Rcpp::wrap(parseEDF(fname));
     return __result;
 END_RCPP
 }
