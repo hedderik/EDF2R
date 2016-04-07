@@ -1,5 +1,7 @@
 ## WARNING: This code assumes you have the EDF_Access_API library called edfapi on your computer
 ## created by SR Research in the context of the EyeLink eye-tracker. Please change the path below,
-## after -L, so that it points to this library, otherwise the EDF2R converter will not work. 
+## after -L, so that it points to this library, otherwise the EDF2R converter will not work.
 
 PKG_LIBS=-L$(CURDIR) `$(R_HOME)/bin/Rscript -e "Rcpp:::LdFlags()"` -ledfapi -LC:/PROGRA~1/SRRESE~1/EYELINK/EDF_AC~1/LIB/WIN32
+
+PKG_LIBS=-L$(CURDIR) `$(R_HOME)/bin/Rscript -e "Rcpp:::LdFlags()"` -ledfapi -LC:/PROGRA~1/SRRESE~1/EYELINK/EDF_AC~1/LIB/WIN32 -LC:/PROGRA~2/SRRESE~1/EYELINK/EDF_AC~1/LIB/WIN32
