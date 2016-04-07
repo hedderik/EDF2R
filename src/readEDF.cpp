@@ -74,7 +74,7 @@ List parseEDF(std::string fname) {
   /* initiation of the EDFFILE struct */
   EDFFILE * ed = NULL;
 
-  Rcpp::List recInfo = NULL;
+  Rcpp::List recInfo = 0;
 
   int rv;
   int recBlock = 0;
@@ -89,7 +89,7 @@ List parseEDF(std::string fname) {
 
   if (rv != 0) {
     printf("An error occured when trying to read %s\n", &fname[0]);
-    return(NULL);
+    return(0);
   }
 
   int sampleCount = 0;
